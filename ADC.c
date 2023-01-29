@@ -51,7 +51,7 @@ extern void ADC_CONFIG(void){
     ADC0->SSCTL1 = (1<<2) | (1<<1) | (1<<6) | (1<<5) | (1<<10) | (1<<9);
     /* Enable ADC Interrupt */
     ADC0->IM |= (1<<2) | (1<<1); /* Unmask ADC0 sequence 2 interrupt pag 1082*/
-    NVIC->IP[3] = (NVIC->IP[3]&0x00FFFFFF) | 0x20000000; // (4n+3) n = 3 en mi caso porque la interrupcion es 15 y 16
+    NVIC->IP[3] = (NVIC->IP[3]&0x00FFFFFF) | 0x220000000; // (4n+3) n = 3 en mi caso porque la interrupcion es 15 y 16
     NVIC->ISER[0] = (1UL << 15); //pag 147
 
     NVIC->IP[4] = (NVIC->IP[4]&0xFFFFFF00) | 0x00000020; // (4n) n = 4 en mi caso porque la interrupcion es 15 y 16
