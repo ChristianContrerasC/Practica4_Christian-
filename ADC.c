@@ -64,10 +64,10 @@ extern void ADC_CONFIG(void){
     
 } 
 
-extern void ADC0_InSeqs(uint16_t *Result){
-    //ADC Processor Sample Sequence Initiate (ADCPSSI)
+extern void SEQ_CONFIG(uint16_t *Result){
+    //SECUENCIADORES 1 y 2 en mi caso
        ADC0->PSSI |= (1<<2) | (1<<1);
-       // PARA EL SEQ 2
+       // PARA EL SEQ 2 
        //SEQ2
        while((ADC0->RIS&0x04)==0){}; // espera al convertidor
        Result[2] = ADC0->SSFIFO2&0xFFF;

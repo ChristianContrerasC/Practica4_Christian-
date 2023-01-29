@@ -36,6 +36,8 @@ static void NmiSR(void);
 static void FaultISR(void);
 static void IntDefaultHandler(void);
 
+// INTERRUPCION PARA EL ADC
+
 void ADCS1INTERRUPCION(void);
 while((ADC0 -> RIS & 8) == 0){
         ADC0 -> PSSI |= (1 << 3);

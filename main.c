@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    
+    // AQUI LLAMAMOS A LAS FUNCIONES DE LOS OTROS ARCHIVOS .c
     //Configurar_PLL(_50MHZ);  //Configuracion de velocidad de reloj
     //Configurar_GPIO();
     //UART_2_CONFIG();
     //PWM_CONFIGURATION(0, 0, 10000, 50000000, 50); 
     ADC_CONFIG();
-    ADC0_InSeqs();
+    SEQ_CONFIG();
     unsigned int LECTURAADC;   
     // extern void PWM_CONFIGURATION(int module, int divisor,  int freq, int f_clk, int duty_cycle)
     while (1){
